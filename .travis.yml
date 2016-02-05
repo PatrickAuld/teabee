@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- 5.5.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: CbghC6wZSiRzlyu7SiOJeOxIhNq8qkznEWik2I1OoIQ1Nz/mEkQScwVGMBlfmumgsPTBDKiTOe584E8uRLM9lOGknfDrv9//Lz2eR7J4pGwkCMpYJeXuQ70q1085s7IG1FW4Zrt+ZUreWT+D3rdwlt6TmBDPiSdiKe8rQG3k5RBNTaWdNKtC1XXt72UE5m8u4vnug2OM6TFYIP5x/FSMnx/9CjcCUj8PFn3IewD7OLPeXG9hjT9B662N2slIJIkSVlZ9yzF3OtZoaNQQ6HiV2Ix1j94cr+KdSNNlJ+YxJe8Rk/oO08Dlgc/i6B7s6z9Z7aGGPiI/80lNvLrBjMNELlY2bT3In7v5KEkm5VhMrPOGl50p9cFMk8HNUAJKK5e8oXiuvTxWD+8B9IntK/kXJLNBKcBqchlmO18x9RW+Hhlsz61ecTBzk38+vLIQaz9jqPg+aRvXQ2JVdu0PcJoj8ZdhNvyp+GZU8mduKVsmDKM9rix8WB1OGiyT+BjLFPFx+7hUU68K//g9XcVXLs1sYtQGC28njuc9wCHl4R9vJN6iHxU3TmynP+Yo350+bvFUIPyGLE3P+bKONBLSBmaUMwK04MHHzdeflmCOuOBBHafY+JrsJ9TzUnyThzzJixv95l0vAbuPeapkzV6cW27qwvLGVTzHQ+8x9LUQd2cZnz8=
+  app: teabee
+  on:
+    repo: PatrickAuld/teabee
