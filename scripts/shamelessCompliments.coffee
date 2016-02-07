@@ -1,7 +1,10 @@
 sendHumbler = (res) ->
   responses = [
-    "No one likes a gloater",
-    "Tooting your own horn there?"
+    "There is nothing noble in being superior to your fellow man; true nobility is being superior to your former self",
+    "True humility is not thinking less of yourself; it is thinking of yourself less",
+    "The biggest challenge after success is shutting up about it",
+    "Self-praise is for losers. Be a winner. Stand for something. Always have class, and be humble",
+    "Pride makes us artificial and humility makes us real"
   ]
   res.send res.random responses
 
