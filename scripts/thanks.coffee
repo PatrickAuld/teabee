@@ -9,7 +9,7 @@ response = [
   "My pleasure",
   "It’s nothing",
   "Think nothing of it",
-  "No, no. thank you!",
+  "No, no. Thank you!",
   "Sure thing",
   "No, thank you"
 ]
