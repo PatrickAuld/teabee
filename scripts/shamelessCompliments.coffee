@@ -40,12 +40,12 @@ module.exports = (robot) ->
     recepient = res.match[1]
     sendCompliment res, recepient
 
-  robot.hear /tell (.*) (he is|he’s|she is|she’s|they are|they’re) (great|wonderful)/i, (res) ->
+  robot.hear /tell (.*) (he is|he’s|he's|she is|she’s|she's|they are|they’re|they're) (great|wonderful)/i, (res) ->
     recepient = res.match[1]
     sendCompliment res, recepient
 
   robot.hear /tell me how (great|wonderful) i am/i, (res) ->
     sendHumbler res
 
-  robot.hear /tell me (i am|i’m) (great|wonderful)/i, (res) ->
+  robot.hear /tell me (i am|i’m|i'm) (great|wonderful)/i, (res) ->
     sendHumbler res
