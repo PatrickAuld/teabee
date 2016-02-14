@@ -1,3 +1,35 @@
+# Description:
+#   Give solicited compliments to individuals.
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot tell <whoever> that they are wonderful
+#   hubot tell <whoever> they are great
+#
+# Notes:
+#   Most pronouns can be used in commands in place of 'they'
+#
+# Author:
+#   Patrick Auld
+module.exports = (robot) ->
+  robot.hear /tell (.*) how (great|wonderful) (he|she|they) (is|are)/i, (res) ->
+    recepient = res.match[1]
+    sendCompliment res, recepient
+
+  robot.hear /tell (.*) (he is|he’s|he's|she is|she’s|she's|they are|they’re|they're) (great|wonderful)/i, (res) ->
+    recepient = res.match[1]
+    sendCompliment res, recepient
+
+  robot.hear /tell me how (great|wonderful) i am/i, (res) ->
+    sendHumbler res
+
+  robot.hear /tell me (i am|i’m|i'm) (great|wonderful)/i, (res) ->
+    sendHumbler res
 sendHumbler = (res) ->
   responses = [
     "There is nothing noble in being superior to your fellow man; true nobility is being superior to your former self",
@@ -35,17 +67,3 @@ sendCompliment = (res, recepient) ->
   ]
   res.send res.random response
 
-module.exports = (robot) ->
-  robot.hear /tell (.*) how (great|wonderful) (he|she|they) (is|are)/i, (res) ->
-    recepient = res.match[1]
-    sendCompliment res, recepient
-
-  robot.hear /tell (.*) (he is|he’s|he's|she is|she’s|she's|they are|they’re|they're) (great|wonderful)/i, (res) ->
-    recepient = res.match[1]
-    sendCompliment res, recepient
-
-  robot.hear /tell me how (great|wonderful) i am/i, (res) ->
-    sendHumbler res
-
-  robot.hear /tell me (i am|i’m|i'm) (great|wonderful)/i, (res) ->
-    sendHumbler res

@@ -1,3 +1,26 @@
+# Description:
+#   Give solicited compliments to individuals.
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot how will sunset be
+#   hubot how will sunrise be
+#
+# Notes:
+#   None
+#
+# Author:
+#   Patrick Auld
+module.exports = (robot) ->
+  robot.hear /how will (sunset|sunrise) be/i, (res) ->
+    type = res.match[1]
+    res.send getPredictionLink(type)
+
 getCacheSlug = () ->
   today = new Date()
   dd = today.getDate()
@@ -14,7 +37,3 @@ getPredictionLink = (type) ->
   slug =  getCacheSlug()
   return "http://sunsetwx.com/#{type}/#{type}_f2.png?d=" + slug
 
-module.exports = (robot) ->
-  robot.hear /how will (sunset|sunrise) be/i, (res) ->
-    type = res.match[1]
-    res.send getPredictionLink(type)
