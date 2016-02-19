@@ -17,10 +17,7 @@
 #   Patrick Auld
 module.exports = (robot) ->
   robot.hear /where is the snowbase/i, (res) ->
-    #res.send "https://goo.gl/maps/xGaiwWHdNKC2"
-    robot.emit('telegram:invoke', 'sendMedia', { chat_id: res.message.room, latitude: 0, longitude: 0 }, responder)
+    type = res.match[1]
+    res.send "https://goo.gl/maps/xGaiwWHdNKC2"
 
-responder = (error, response) ->
-    console.log(error)
-    console.log(response)
 
