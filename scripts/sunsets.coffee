@@ -17,8 +17,8 @@
 # Author:
 #   Patrick Auld
 module.exports = (robot) ->
-  robot.hear /how will (sunset|sunrise) be/i, (res) ->
-    type = res.match[1]
+  robot.hear /how will(\sthe)? (sunset|sunrise) be/i, (res) ->
+    type = res.match[2]
     res.send getPredictionLink(type)
 
 getCacheSlug = () ->
